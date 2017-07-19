@@ -846,7 +846,7 @@ void CvrmfcDlg::process_com(const std::string & data)
 
 	// bright
 	if (std::string::npos != data.find("lt")) {
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i <= 6; i++) {
 			com_if("lt" + std::to_string(i)) {
 				if (brightness_level_ != i) {
 					brightness_level_ = i;
@@ -1123,19 +1123,19 @@ bool CvrmfcDlg::do_reset_video()
 
 bool CvrmfcDlg::do_update_camera(CameraControlProperty p, int value)
 {
-	if (dscap_.isOpened() && dscap_.update_camera(p, value)) {
+	/*if (dscap_.isOpened() && dscap_.update_camera(p, value)) {
 		config::get_instance()->set_camera(dscap_.get_camera());
 		return true;
-	}
+	}*/
 	return false;
 }
 
 bool CvrmfcDlg::do_reset_camera()
 {
-	if (dscap_.isOpened() && dscap_.reset_camera()) {
+	/*if (dscap_.isOpened() && dscap_.reset_camera()) {
 		config::get_instance()->set_camera(dscap_.get_camera());
 		return true;
-	}
+	}*/
 	return false;
 }
 

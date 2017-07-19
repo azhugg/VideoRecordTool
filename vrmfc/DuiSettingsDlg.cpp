@@ -538,7 +538,7 @@ void CDuiSettingsDlg::OnClick(TNotifyUI & msg)
 		normal_btn();
 	} else if (name == "reset_camera") {
 		hot_btn();
-		if (maindlg->do_reset_camera()) {
+		/*if (maindlg->do_reset_camera()) {
 			get_ctrl(CLabelUI, camera_min);
 			get_ctrl(CLabelUI, camera_val);
 			get_ctrl(CLabelUI, camera_max);
@@ -562,7 +562,7 @@ void CDuiSettingsDlg::OnClick(TNotifyUI & msg)
 				camera_inc->SetEnabled(camera.exposure.valid_ > 0);
 
 			}
-		}
+		}*/
 		DuiSleep(300);
 		normal_btn();
 	} else if (name == "inc_time") {
@@ -699,7 +699,7 @@ void CDuiSettingsDlg::on_video_slider()
 
 void CDuiSettingsDlg::on_camera_slider()
 {
-	auto camera_slider = static_cast<CSliderUI*>(m_PaintManager.FindControl(L"camera_slider")); assert(camera_slider);
+	/*auto camera_slider = static_cast<CSliderUI*>(m_PaintManager.FindControl(L"camera_slider")); assert(camera_slider);
 	if (!camera_slider)return;
 	int val = camera_slider->GetValue();
 
@@ -708,7 +708,7 @@ void CDuiSettingsDlg::on_camera_slider()
 		auto camera_val = static_cast<CSliderUI*>(m_PaintManager.FindControl(L"camera_val")); assert(camera_val);
 		if (!camera_val)return;
 		camera_val->SetText(std::to_wstring(val).c_str());
-	}
+	}*/
 
 }
 
