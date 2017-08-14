@@ -268,7 +268,7 @@ void CDuiBottomTool::OnClick(TNotifyUI & msg)
 
 	case CDuiBottomTool::video_view:
 	{
-		if (name == btn_names::back) {
+		if (name == btn_names::back)                   {
 			assert(video_player_); assert(video_view_tip_); assert(video_cur_time_); assert(video_total_time_);
 
 			video_player_->SendMessageW(WM_CLOSE);

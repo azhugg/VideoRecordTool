@@ -22,11 +22,6 @@
 #include "DuiSysInfoDlg.h"
 #include "DuiSerialErrorDlg.h"
 
-#ifdef _DEBUG
-#pragma comment(lib, "serial/lib/Debug/serial.lib")
-#else
-#pragma comment(lib, "serial/lib/Release/serial.lib")
-#endif // _DEBUG
 
 
 #ifdef _DEBUG
